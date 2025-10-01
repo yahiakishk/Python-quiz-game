@@ -23,7 +23,7 @@ for question in questions:
     while True:
         guess = input("Enter your answer (A, B, C, D) (q to quit): ").upper()
         if guess == "Q":
-            break
+            exit()
         elif guess not in ("A", "B", "C", "D"):
             print("Input invalid please only enter these: A, B, C, D")
         else:
@@ -34,6 +34,7 @@ for question in questions:
         print("*******************Correct!*******************")
     else:
         print("*******************Incorrect!*******************")
+        print(f"{answers[question_number]} was the correct answer")
 
     question_number += 1
 print(f'You got {score} question right out of 5 questions')
